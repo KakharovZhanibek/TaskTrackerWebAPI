@@ -32,17 +32,18 @@ namespace TaskTrackerWebAPI.Controllers
             if (!_projectRepository.GetAll().Any())
                 return NotFound();
 
-            return Ok(_projectRepository.GetAll().Select(x => _mapper.Map<ProjectVM>(x)));
+            return Ok(_projectRepository.GetAll().Select(x => _mapper.Map<ProjectVM>(x)).ToList());
         }
 
         [HttpGet("{projectId}")]
         public ActionResult<ProjectVM> Get(int projectId)
         {
-            ProjectVM project = _mapper.Map<ProjectVM>(_projectRepository.GetById(projectId));
+            var temp = _projectRepository.GetById(projectId);
+            ProjectVM project = _mapper.Map<ProjectVM>(temp);
 
             if (project == null)
             {
-                return NotFound();
+                return NotFound(project);
             }
 
             return Ok(project); ;

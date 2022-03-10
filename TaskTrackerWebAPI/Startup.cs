@@ -71,22 +71,23 @@ namespace TaskTrackerWebAPI
         }
         private void RegisterAutoMapper(IServiceCollection services)
         {
-            var configurationExpression = new MapperConfigurationExpression();
 
-            MapBothSide<ProjectEntity, ProjectVM>(configurationExpression);
-            MapBothSide<TaskEntity, TaskVM>(configurationExpression);
+            //var configurationExpression = new MapperConfigurationExpression();
 
-            var config = new MapperConfiguration(configurationExpression);
-            var mapper = new Mapper(config);
+            //MapBothSide<ProjectEntity, ProjectVM>(configurationExpression);
+            //MapBothSide<TaskEntity, TaskVM>(configurationExpression);
 
-            services.AddScoped<IMapper>(x => mapper);
+            //var config = new MapperConfiguration(configurationExpression);
+            //var mapper = new Mapper(config);
+
+            services.AddScoped<IMapper>(x => MappingConfigurator.ConfigureMapper());
         }
 
-        public void MapBothSide<Type1, Type2>(MapperConfigurationExpression configurationExpression)
-        {
-            configurationExpression.CreateMap<Type1, Type2>();
-            configurationExpression.CreateMap<Type2, Type1>();
-        }
+        //public void MapBothSide<Type1, Type2>(MapperConfigurationExpression configurationExpression)
+        //{
+        //    configurationExpression.CreateMap<Type1, Type2>();
+        //    configurationExpression.CreateMap<Type2, Type1>();
+        //}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

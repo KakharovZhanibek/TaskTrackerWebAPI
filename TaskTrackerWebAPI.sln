@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskTrackerWebAPI", "TaskTrackerWebAPI\TaskTrackerWebAPI.csproj", "{38182ADF-66DA-4BA6-9B0A-34FE7524C47B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTrackerWebAPI.DAL", "TaskTrackerWebAPI.DAL\TaskTrackerWebAPI.DAL.csproj", "{515418E3-611C-4AC6-A62D-B9C7384489B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskTrackerWebAPI.DAL", "TaskTrackerWebAPI.DAL\TaskTrackerWebAPI.DAL.csproj", "{515418E3-611C-4AC6-A62D-B9C7384489B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTrackerWebAPI.Tests", "TaskTrackerWebAPI.Tests\TaskTrackerWebAPI.Tests.csproj", "{AAAFDD39-966F-4D07-8F72-2889375A88EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{515418E3-611C-4AC6-A62D-B9C7384489B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{515418E3-611C-4AC6-A62D-B9C7384489B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{515418E3-611C-4AC6-A62D-B9C7384489B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAAFDD39-966F-4D07-8F72-2889375A88EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAFDD39-966F-4D07-8F72-2889375A88EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAFDD39-966F-4D07-8F72-2889375A88EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAFDD39-966F-4D07-8F72-2889375A88EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

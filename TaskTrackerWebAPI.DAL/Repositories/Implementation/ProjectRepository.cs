@@ -22,7 +22,5 @@ namespace TaskTrackerWebAPI.DAL.Repositories.Implementation
         {
             return _dbSet.Include(p => p.Tasks).ToList();
         }
-
-        public List<ProjectEntity>GetAllWith
     }
 }
